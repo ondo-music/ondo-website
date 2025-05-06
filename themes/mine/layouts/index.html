@@ -1,0 +1,108 @@
+{{ define "main" }}
+
+<div class="section">
+  <h1 class="zen-kaku animate-line">感知する</h1>
+
+  <div class="hashtags">
+    <div>
+      <span>#ambiguity</span> <span>#gradient</span> <span>#tuning</span>
+      <span>#sensation</span> <span>#rebuild</span> <span>#outline</span> <span>#misfit</span>
+      <span>#question</span> <span>#cultural_noise</span> <span>#recreation</span>
+      <span>#boundary</span> <span>#fragmented</span> <span>#nonanswer</span>
+      <span>#resonance</span> <span>#playstate</span> <span>#static</span>
+      <span>#disruption</span> <span>#pause</span> <span>#whitespace</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <a href="#ondo" class="scroll-link">ondo ≒ ?</a>
+    <a href="#music" class="scroll-link">music ≒ ?</a>
+    <a href="#text" class="scroll-link">log. ≒ ?</a>
+    <a href="#kyo-han" class="scroll-link">partner in crime ≒ ?</a>
+    <a href="mailto:ondo.music.life@gmail.com" class="plain-link">contact = 連絡</a>
+
+
+  </div>
+
+</div>
+
+<div id="ondo" class="section fade-in">
+  <h2 class="zen-kaku">
+    <a href="/ondo/" class="plain-link">ondo = ?</a>
+    <span class="arrow-blink">←</span>
+  </h2>
+
+  <p class="sub-line">とは？</p>
+  <div class="hashtags">
+    <span>#曖昧</span> <span>#感覚</span> <span>#グラデーション</span> <span>#独自</span>
+    <span>#ジャンルレス</span> <span>#文化</span> <span>#前衛</span> <span>#思想</span>
+    <span>#破壊</span> <span>#再生</span> <span>#個性</span>
+    <span>#ambiguity</span> <span>#avantgarde</span> <span>#sensation</span>
+    <span>#gradient</span> <span>#originality</span> <span>#genreless</span>
+    <span>#culture</span> <span>#ideology</span> <span>#deconstruction</span>
+    <span>#rebirth</span> <span>#individuality</span>
+  </div>
+</div>
+
+<div id="music" class="section fade-in">
+  <h2 class="zen-kaku">
+    <a href="/music/" class="plain-link">music = ?</a>
+    <span class="arrow-blink">←</span>
+  </h2>
+
+  <p class="sub-line">音楽</p>
+  <div class="hashtags">
+    <span>#ジャンルレス</span> <span>#ビート</span> <span>#ボーカロイド</span>
+    <span>#合成音声</span> <span>#DTM</span> <span>#デジタル</span> <span>#アナログ</span> <span>#文化</span>
+    <span>#genreless</span> <span>#beat</span> <span>#vocaloid</span>
+    <span>#synth_voice</span> <span>#dtm</span> <span>#digital</span> <span>#analog</span>
+  </div>
+</div>
+
+<div id="text" class="section fade-in">
+  <h2 class="zen-kaku">
+    <a href="/log/" class="plain-link">log. = ?</a>
+    <span class="arrow-blink">←</span>
+  </h2>
+
+  <p class="sub-line">文章</p>
+  <div class="hashtags">
+    <span>#思想</span> <span>#生きづらさ</span> <span>#言語化</span> <span>#モヤモヤ</span>
+    <span>#わからない</span> <span>#問い</span> <span>#悩み</span>
+    <span>#未来</span> <span>#過去</span> <span>#現在</span>
+    <span>#ideology</span> <span>#unspoken_feelings</span>
+    <span>#vagueness</span> <span>#unknown</span> <span>#question</span>
+    <span>#struggle</span> <span>#future</span> <span>#past</span> <span>#present</span>
+  </div>
+</div>
+
+<div id="kyo-han" class="section fade-in">
+  <h2 class="zen-kaku">
+    <a href="/partner/" class="plain-link">partner in crime = ?</a>
+    <span class="arrow-blink">←</span>
+  </h2>
+
+  <p class="sub-line">共犯者募集</p>
+  <div class="hashtags">
+    <span>#仲間</span> <span>#支援</span> <span>#疑問</span> <span>#思想</span>
+    <span>#問い</span> <span>#考え</span> <span>#悩み</span> <span>#新しさ</span>
+    <span>#個性</span> <span>#わからない</span>
+    <span>#ally</span> <span>#support</span> <span>#exchange</span>
+    <span>#ideology</span> <span>#question</span> <span>#reflection</span>
+    <span>#struggle</span> <span>#novelty</span> <span>#individuality</span> <span>#unknown</span>
+  </div>
+</div>
+
+
+
+
+{{ if .IsHome }}
+<a href="/music/" class="fixed-mv">
+  <video id="mv-preview" autoplay muted loop playsinline>
+    <source src="/videos/new_mv.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <span class="mv-label">New release</span>
+</a>
+{{ end }}
+{{ end }}

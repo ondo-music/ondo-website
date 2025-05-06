@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+<div class="section ondo-page">
+
+  <!-- ヘッダー -->
+  {{ partial "music_header.html" . }}
+
+  <!-- ハッシュタグ -->
+  {{ partial "music_tags.html" . }}
+
+  <!-- 年代タイトル + 横棒 -->
+  <div class="shoulders poppins animate-line">
+    2024.
+  </div>
+
+  <!-- ジャケット表示グリッド -->
+  <div class="discography-grid">
+    <!-- 仏滅 -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/butsumetsu_jacket.png" alt="仏滅ジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">仏滅（album）</strong>
+        <a href="https://ondomusic.booth.pm/items/5515861">BOOTH</a>
+        <a href="https://tower.jp/item/6290148">タワーレコード</a>
+        <a href="https://nex-tone.link/A00137474">サブスク</a>
+      </div>
+    </div>   
+    <!-- アクマティックニュウエンド -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/akumaticnewend_jacket.PNG" alt="アクマティックニュウエンドジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">アクマティックニュウエンド</strong>
+        <a href="https://youtu.be/PtWJMS1PVJA">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm44224052">ニコニコ動画</a>
+        <a href="#">サブスク</a>
+      </div>
+    </div>   
+    <!-- yotokashi -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/yotokashi_jacket.JPG" alt="yotokashiジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">yotokashi</strong>
+        <a href="https://youtu.be/MUiPbXS_3J4">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm44183763">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00166100">サブスク</a>
+      </div>
+    </div>   
+    <!-- 区々 -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/machimachi_jacket.PNG" alt="区々ジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">区々</strong>
+        <a href="https://youtu.be/6MTlnnJsFa8">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm43926765">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00160745">サブスク</a>
+      </div>
+    </div>   
+    <!-- トワイライトタイム -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/twilighttime_jacket.png" alt="トワイライトタイムジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">トワイライトタイム</strong>
+        <a href="https://youtu.be/arCWKepq5h0">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm43735432">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00153525">サブスク</a>
+      </div>
+    </div>   
+    <!-- ヒナタチ -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/hinatachi_jacket.PNG" alt="ヒナタチジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">ヒナタチ</strong>
+        <a href="https://youtu.be/Yh8NKaDehqM">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm43612891">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00133809">サブスク</a>
+      </div>
+    </div>   
+    <!-- 抱腹絶倒 -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2024/houfukuzettou_jacket.JPEG" alt="抱腹絶倒ジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">抱腹絶倒</strong>
+        <a href="https://youtu.be/oE3Obbv3uUA ">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm43356466">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00136895">サブスク</a>
+      </div>
+    </div>   
+    <!-- 他作品も同様に増やせます -->
+  </div>
+
+  <!-- 年代ナビ -->
+  {{ partial "music_year_nav.html" (dict "CurrentYear" "2024") }}
+
+  <!-- 共通リンク -->
+  {{ partial "music_footer_links.html" . }}
+
+  <!-- トップボタン -->
+  <div class="back-to-top-button">
+    <a href="/" class="plain-link">top</a>
+  </div>
+
+</div>
+
+<!-- JavaScript：クリックでメニュー表示 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const albumImages = document.querySelectorAll('.album-image img');
+
+    albumImages.forEach(img => {
+      img.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const menu = this.closest('.album-card').querySelector('.menu-links');
+
+        // 他のメニューを閉じる
+        document.querySelectorAll('.menu-links').forEach(m => {
+          if (m !== menu) m.classList.add('hidden');
+        });
+
+        // 表示・非表示を切り替え
+        menu.classList.toggle('hidden');
+      });
+    });
+
+    // 外部クリックで全部閉じる
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.menu-links').forEach(menu => {
+        menu.classList.add('hidden');
+      });
+    });
+  });
+</script>
+
+
+
+
+{{ end }}

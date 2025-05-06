@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+<div class="section ondo-page">
+
+  <!-- ヘッダー -->
+  {{ partial "music_header.html" . }}
+
+  <!-- ハッシュタグ -->
+  {{ partial "music_tags.html" . }}
+
+  <!-- 年代タイトル + 横棒 -->
+  <div class="shoulders poppins animate-line">
+    2025.
+  </div>
+
+  <!-- ジャケット表示グリッド -->
+  <div class="discography-grid">
+    <!-- まひるまの唄 -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2025/asongofnoon_jacket.JPG" alt="まひるまの唄ジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">まひるまの唄</strong>
+        <a href="https://youtu.be/95P_cuLRw2g">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm44705463">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00180957">サブスク</a>
+      </div>
+    </div>   
+    <!-- カラブルメイカー -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2025/karaburumaker_jacket.JPG" alt="カラブルメイカージャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">カラブルメイカー</strong>
+        <a href="https://youtu.be/TuHT1XEk3w0?si=sZbziBrUAOFIucUW">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm44633411">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00178635">サブスク</a>
+      </div>
+    </div>   
+    <!-- WHYET? -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2025/WHYET_jacket.png" alt="WHYET?ジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">WHYET?</strong>
+        <a href="https://youtu.be/3lVoOXT_ZZY?si=XPJYEKCLWCW3ZMDS">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm44378536">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00171288">サブスク</a>
+      </div>
+    </div>   
+    
+    <!-- 他作品も同様に増やせます -->
+  </div>
+
+  <!-- 年代ナビ -->
+  {{ partial "music_year_nav.html" (dict "CurrentYear" "2025") }}
+
+  <!-- 共通リンク -->
+  {{ partial "music_footer_links.html" . }}
+
+  <!-- トップボタン -->
+  <div class="back-to-top-button">
+    <a href="/" class="plain-link">top</a>
+  </div>
+
+</div>
+
+<!-- JavaScript：クリックでメニュー表示 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const albumImages = document.querySelectorAll('.album-image img');
+
+    albumImages.forEach(img => {
+      img.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const menu = this.closest('.album-card').querySelector('.menu-links');
+
+        // 他のメニューを閉じる
+        document.querySelectorAll('.menu-links').forEach(m => {
+          if (m !== menu) m.classList.add('hidden');
+        });
+
+        // 表示・非表示を切り替え
+        menu.classList.toggle('hidden');
+      });
+    });
+
+    // 外部クリックで全部閉じる
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.menu-links').forEach(menu => {
+        menu.classList.add('hidden');
+      });
+    });
+  });
+</script>
+
+
+
+
+{{ end }}

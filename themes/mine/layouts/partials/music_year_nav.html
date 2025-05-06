@@ -1,0 +1,17 @@
+<div class="year-nav">
+  {{ if ne .CurrentYear "2025" }}
+    <p class="year-link"><a href="/music/2025/">2025.</a></p>
+  {{ else }}
+    <p class="year-current">・2025.</p>
+  {{ end }}
+  {{ if ne .CurrentYear "2024" }}
+    <p class="year-link"><a href="/music/2024/">2024.</a></p>
+  {{ else }}
+    <p class="year-current">・2024.</p>
+  {{ end }}
+  {{ if ne .CurrentYear "2023" }}
+    <p class="year-link"><a href="/music/2023/">2023.</a></p>
+  {{ else }}
+    <p class="year-current">・2023.</p>
+  {{ end }}
+</div>

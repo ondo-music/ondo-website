@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<!-- 背景動画 -->
+<video autoplay muted loop playsinline id="background-video">
+  <source src="/videos/soft_loop_bg.mp4" type="video/mp4" />
+</video>
+
+<div class="section ondo-page">
+  <div class="shoulders zen-kaku">
+    共犯者募集 / partner in crime
+  </div>
+
+  <div class="hashtags left-align">
+    <span>#仲間</span> <span>#支援</span> <span>#疑問</span> <span>#思想</span>
+    <span>#問い</span> <span>#考え</span> <span>#悩み</span> <span>#新しさ</span>
+    <span>#個性</span> <span>#わからない</span>
+    <span>#ally</span> <span>#support</span> <span>#exchange</span>
+    <span>#ideology</span> <span>#question</span> <span>#reflection</span>
+    <span>#struggle</span> <span>#novelty</span> <span>#individuality</span> <span>#unknown</span>
+  </div>
+
+  <div class="catch zen-kaku">
+    <div class="catch-ja">ズレていくのを一緒に楽しみませんか.</div>
+    <div class="catch-en">Let's drift with the shift.</div>
+  </div>
+
+  <div class="partner-description">
+    <div class="text-line" id="partner-ja"></div>
+    <div class="text-line" id="partner-en"></div>
+  </div>
+
+  <div class="ondo-links left-align">
+    <p>
+      <span class="question-text">partner ≒ 音 ?</span>
+      <span class="line-expand"></span>
+      <span class="links"><a href="/music/">music</a></span>
+    </p>
+
+    <p>
+      <span class="question-text">partner ≒ 温度 ?</span>
+      <span class="line-expand"></span>
+      <span class="links"><a href="/music/">music</a> / <a href="/log/">log.</a></span>
+    </p>
+
+    <p>
+      <span class="question-text">partner ≒ 未完成 ?</span>
+      <span class="line-expand"></span>
+      <span class="links"><a href="/music/">music</a> / <a href="/log/">log.</a> / <a href="/partner/">partner in crime</a></span>
+    </p>
+
+    <p>
+      <span class="question-text">partner ≒ グラデーション ?</span>
+      <span class="line-expand"></span>
+      <span class="links"><a href="/partner/">partner in crime</a></span>
+    </p>
+  </div>
+
+  <div class="back-to-top-button">
+    <a href="/" class="plain-link">top</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const jaText = "正解を求めるけれど...としても楽しめるような考え事をしていく。";
+  const enText = "We seek the right answer, but the right answer is infinitely far away...";
+
+  const jaEl = document.getElementById('partner-ja');
+  const enEl = document.getElementById('partner-en');
+
+  let i = 0, j = 0;
+
+  function loopJa() {
+    if (i <= jaText.length) {
+      jaEl.innerText = jaText.slice(0, i++);
+      setTimeout(loopJa, 40);
+    } else {
+      setTimeout(() => { jaEl.innerText = ""; i = 0; loopJa(); }, 5000);
+    }
+  }
+
+  function loopEn() {
+    if (j <= enText.length) {
+      enEl.innerText = enText.slice(0, j++);
+      setTimeout(loopEn, 40);
+    } else {
+      setTimeout(() => { enEl.innerText = ""; j = 0; loopEn(); }, 5000);
+    }
+  }
+
+  loopJa();
+  loopEn();
+});
+</script>
+
+{{ end }}

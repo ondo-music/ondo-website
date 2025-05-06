@@ -1,0 +1,151 @@
+{{ define "main" }}
+
+<div class="section ondo-page">
+
+  <!-- ヘッダー -->
+  {{ partial "music_header.html" . }}
+
+  <!-- ハッシュタグ -->
+  {{ partial "music_tags.html" . }}
+
+  <!-- 年代タイトル + 横棒 -->
+  <div class="shoulders poppins animate-line">
+    2023.
+  </div>
+
+  <!-- ジャケット表示グリッド -->
+  <div class="discography-grid">
+    <!-- flex -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2023/flex_jacket.png" alt="flexジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">flex</strong>
+        <a href="https://youtu.be/QzaL79pXgTU">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm43054298">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00129779">サブスク</a>
+      </div>
+    </div>   
+    <!-- モノクロイ -->
+    <div class="album-card">
+        <div class="album-image">
+          <img src="/images/discography/2023/monokuroi_jacket.png" alt="モノクロイジャケット">
+        </div>
+        <div class="menu-links hidden">
+          <strong class="menu-title">モノクロイ</strong>
+          <a href="https://youtu.be/C34l-kOLLMU">YouTube</a>
+          <a href="https://www.nicovideo.jp/watch/sm42874200">ニコニコ動画</a>
+          <a href="https://nex-tone.link/A00125040">サブスク</a>
+        </div>
+      </div>
+    <!-- One 2nd -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2023/one2nd_jacket.png" alt="One 2ndジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">One 2nd</strong>
+        <a href="https://youtu.be/4tV10xq8oM4">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm42866158">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00124249">サブスク</a>
+      </div>
+    </div>   
+    <!-- シチューがおかずになるなんて -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2023/cantbelievestewisasidedish_jacket.png" alt="シチューがおかずになるなんてジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">シチューがおかずになるなんて</strong>
+        <a href="https://youtu.be/-UF2BUEGLHA">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm42806611">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00123626">サブスク</a>
+      </div>
+    </div>   
+    <!-- スリパナイト -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2023/sleepanight_jacket.png" alt="スリパナイトジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">スリパナイト</strong>
+        <a href="https://youtu.be/qeurJXQRAXA">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm42733828">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00122512">サブスク</a>
+      </div>
+    </div>   
+    <!-- Chips girl's -->
+    <div class="album-card">
+      <div class="album-image">
+        <img src="/images/discography/2023/chipsgirls_jacket.PNG" alt="Chips girl'sジャケット">
+      </div>
+      <div class="menu-links hidden">
+        <strong class="menu-title">Chips girl's</strong>
+        <a href="https://youtu.be/LtRqEuLBJ1c">YouTube</a>
+        <a href="https://www.nicovideo.jp/watch/sm42555629">ニコニコ動画</a>
+        <a href="https://nex-tone.link/A00120566">サブスク</a>
+      </div>
+    </div>  
+    <!-- 圏外ステイタス -->
+    <div class="album-card">
+        <div class="album-image">
+          <img src="/images/discography/2023/kengaistatus_jacket.png" alt="圏外ステイタスジャケット">
+        </div>
+        <div class="menu-links hidden">
+          <strong class="menu-title">圏外ステイタス</strong>
+          <a href="https://youtu.be/rbPtAzMvp2o">YouTube</a>
+          <a href="https://www.nicovideo.jp/watch/sm42214806">ニコニコ動画</a>
+          <a href="https://nex-tone.link/A00120567">サブスク</a>
+        </div>
+      </div>    
+   
+    <!-- 他作品も同様に増やせます -->
+  </div>
+
+  <!-- 年代ナビ -->
+  {{ partial "music_year_nav.html" (dict "CurrentYear" "2023") }}
+
+  <!-- 共通リンク -->
+  {{ partial "music_footer_links.html" . }}
+
+  <!-- トップボタン -->
+  <div class="back-to-top-button">
+    <a href="/" class="plain-link">top</a>
+  </div>
+
+</div>
+
+<!-- JavaScript：クリックでメニュー表示 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const albumImages = document.querySelectorAll('.album-image img');
+
+    albumImages.forEach(img => {
+      img.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const menu = this.closest('.album-card').querySelector('.menu-links');
+
+        // 他のメニューを閉じる
+        document.querySelectorAll('.menu-links').forEach(m => {
+          if (m !== menu) m.classList.add('hidden');
+        });
+
+        // 表示・非表示を切り替え
+        menu.classList.toggle('hidden');
+      });
+    });
+
+    // 外部クリックで全部閉じる
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.menu-links').forEach(menu => {
+        menu.classList.add('hidden');
+      });
+    });
+  });
+</script>
+
+
+
+
+{{ end }}
