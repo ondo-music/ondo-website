@@ -99,7 +99,7 @@
 {{ if .IsHome }}
 <a href="/music/" class="fixed-mv">
   <video id="mv-preview" autoplay muted loop playsinline>
-    <source src="/videos/new_mv.mp4" type="video/mp4" />
+    <source src="{{ "videos/new_mv.mp4" | relURL }}" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <span class="mv-label">New release</span>

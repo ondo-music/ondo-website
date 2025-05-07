@@ -1,4 +1,4 @@
-baseURL = 'https://ondo-music.github.io/ondo-website/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://ondo-music.github.io/ondo-website/"
+languageCode = "ja-jp"
+title = "ondo website"
 theme = "mine"
