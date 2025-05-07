@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/music/2023/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/music/2023/</loc>
     <lastmod>2025-04-28T23:01:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/music/2024/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/music/2024/</loc>
     <lastmod>2025-04-28T23:01:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/music/2025/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/music/2025/</loc>
     <lastmod>2025-04-28T23:01:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/</loc>
     <lastmod>2025-04-28T23:01:55+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/partner/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/partner/</loc>
     <lastmod>2025-04-28T15:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/log/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/log/</loc>
     <lastmod>2025-04-28T14:36:34+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/music/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/music/</loc>
     <lastmod>2025-04-28T13:07:54+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ondo/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/ondo/</loc>
     <lastmod>2025-04-28T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://ondo-music.github.io/ondo-website/tags/</loc>
   </url>
 </urlset>
